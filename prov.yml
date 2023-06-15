@@ -1,5 +1,4 @@
---- 
-  hosts: DynamicWeb
+- hosts: DynamicWeb
   become: true # Установка Docker через sudo
   gather_facts: false
   tasks:
@@ -64,7 +63,7 @@
     user:
       name: vagrant
       group: "docker"
-      append: yes
+      append: true
     tags:
     - docker
 
